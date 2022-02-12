@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+// complies all the information into a group
 public class VolumeInfo {
     @SerializedName("title")
     @Expose

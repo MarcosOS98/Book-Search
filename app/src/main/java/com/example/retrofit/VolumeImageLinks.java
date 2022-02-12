@@ -3,6 +3,7 @@ package com.example.retrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+// returns information from the repository, isolates the image links
 public class VolumeImageLinks {
     @SerializedName("smallThumbnail")
     @Expose

@@ -15,6 +15,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//creation of the repository
 public class BookRepository {
     private static final String BOOK_SEARCH_SERVICE_BASE_URL = "https://www.googleapis.com/";
 
@@ -23,7 +24,7 @@ public class BookRepository {
 
     public BookRepository() {
         volumesResponseLiveData = new MutableLiveData<>();
-
+//calling the http client
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.level(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -36,7 +37,7 @@ public class BookRepository {
                 .create(BookSearchService.class);
 
     }
-
+ // Search through the repository for matching keyword and author
     public void searchVolumes(String keyword, String author) {
         bookSearchService.searchVolumes(keyword, author)
                 .enqueue(new Callback<VolumesResponse>() {
@@ -53,7 +54,7 @@ public class BookRepository {
                     }
                 });
     }
-
+// return the information
     public LiveData<VolumesResponse> getVolumesResponseLiveData() {
         return volumesResponseLiveData;
     }

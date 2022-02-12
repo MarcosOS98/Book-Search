@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+// returns information from a JSON file which then serializes or deserializes.
 public class VolumesResponse {
     @SerializedName("kind")
     @Expose

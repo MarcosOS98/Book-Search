@@ -19,6 +19,7 @@ import com.example.retrofit.BookSearchResultsAdapter;
 import com.example.retrofit.VolumesResponse;
 import com.example.retrofit.BookSearchViewModel;
 
+// user enters information about the book
 public class BookSearchFragment extends Fragment {
     private BookSearchViewModel viewModel;
     private BookSearchResultsAdapter adapter;
@@ -48,7 +49,7 @@ public class BookSearchFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_book_search, container, false);
-
+// creates the recycler view
         RecyclerView recyclerView = view.findViewById(R.id.fragment_book_search_searchResultsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
@@ -66,7 +67,7 @@ public class BookSearchFragment extends Fragment {
 
         return view;
     }
-
+// runs the search
     public void performSearch() {
         String keyword = keywordEditText.getEditableText().toString();
         String author = authorEditText.getEditableText().toString();

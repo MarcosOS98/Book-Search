@@ -16,6 +16,7 @@ import com.example.retrofit.Util;
 import java.util.ArrayList;
 import java.util.List;
 
+// returns results of the search
 public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchResultsAdapter.BookSearchResultHolder> {
     private List<Volume> results = new ArrayList<>();
 
@@ -61,6 +62,7 @@ public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchRes
         notifyDataSetChanged();
     }
 
+    // displays information about the book query
     class BookSearchResultHolder extends RecyclerView.ViewHolder {
         private TextView titleTextView;
         private TextView authorsTextView;

@@ -3,6 +3,7 @@ package com.example.retrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+// sends information to a JSON file which then serializes or deserializes.
 public class Volume {
     @SerializedName("kind")
     @Expose
